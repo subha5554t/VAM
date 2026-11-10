@@ -1,0 +1,1881 @@
+{
+ "meta": {
+  "version": "2.0",
+  "generatedBy": "gen.py seed=48213",
+  "currency": "INR",
+  "note": "ALL DATA IS MOCK. Windows are rolling 30-day periods (previous 30 days vs last 30 days). Fields marked assumed:true are assumptions, not given by the brief."
+ },
+ "seller": {
+  "id": "SD-48213",
+  "name": "Rajesh Sharma",
+  "business": "Sharma Home Essentials",
+  "city": "Kanpur",
+  "state": "Uttar Pradesh",
+  "category": "Home & Kitchen",
+  "onboardedYear": 2022,
+  "preferredLanguage": "hinglish",
+  "fulfilment": "self_ship",
+  "pickupPincode": "208001",
+  "activeSkus": 60
+ },
+ "metrics": {
+  "last": {
+   "sales": 200000,
+   "orders": 400,
+   "cancellationRate": 0.08,
+   "asp": 500,
+   "outOfStock": 5
+  },
+  "current": {
+   "sales": 135000,
+   "orders": 270,
+   "cancellationRate": 0.14,
+   "asp": 500,
+   "outOfStock": 18
+  }
+ },
+ "derived": {
+  "netOrders": {
+   "last": 368,
+   "current": 232
+  },
+  "netSales": {
+   "last": 184000,
+   "current": 116000
+  },
+  "cancelledOrders": {
+   "last": 32,
+   "current": 38
+  }
+ },
+ "assumed": {
+  "impressions": {
+   "last": 120000,
+   "current": 84000,
+   "weekly": {
+    "last": [
+     29000,
+     30000,
+     31000,
+     30000
+    ],
+    "current": [
+     30000,
+     25000,
+     16000,
+     13000
+    ]
+   }
+  },
+  "conversionRate": {
+   "last": 0.00333,
+   "current": 0.00321
+  },
+  "dispatchSlaBreachRate": {
+   "last": 0.06,
+   "current": 0.15,
+   "weekly": {
+    "last": [
+     0.05,
+     0.06,
+     0.06,
+     0.07
+    ],
+    "current": [
+     0.07,
+     0.12,
+     0.18,
+     0.23
+    ]
+   }
+  },
+  "sellerRating": {
+   "last": 4.2,
+   "current": 4.0,
+   "weekly": {
+    "last": [
+     4.2,
+     4.2,
+     4.2,
+     4.2
+    ],
+    "current": [
+     4.2,
+     4.1,
+     4.0,
+     3.9
+    ]
+   }
+  },
+  "adSpend": {
+   "last": 8000,
+   "current": 2500,
+   "reason_hint": "reduced to conserve cash while supplier payments were pending"
+  },
+  "adAttributedOrders": {
+   "last": 52,
+   "current": 17
+  },
+  "competitorPriceIndex": {
+   "last": 100,
+   "current": 101,
+   "note": "competitors' prices roughly unchanged vs this seller on top 10 SKUs"
+  },
+  "restockLeadDays": {
+   "min": 5,
+   "max": 7
+  },
+  "cashflow": {
+   "note": "supplier payment of about 1.2 lakh pending; seller reduced ads and delayed restock"
+  }
+ },
+ "ordersDaily": {
+  "last": [
+   12,
+   14,
+   12,
+   12,
+   13,
+   15,
+   15,
+   13,
+   13,
+   12,
+   13,
+   13,
+   15,
+   16,
+   13,
+   13,
+   12,
+   12,
+   13,
+   17,
+   14,
+   14,
+   12,
+   13,
+   12,
+   14,
+   14,
+   15,
+   13,
+   11
+  ],
+  "current": [
+   12,
+   12,
+   12,
+   12,
+   13,
+   16,
+   13,
+   10,
+   11,
+   9,
+   8,
+   9,
+   11,
+   10,
+   7,
+   7,
+   8,
+   8,
+   7,
+   8,
+   8,
+   6,
+   6,
+   7,
+   6,
+   7,
+   8,
+   7,
+   6,
+   6
+  ],
+  "ordersWeekly": {
+   "last": [
+    93,
+    95,
+    94,
+    118
+   ],
+   "current": [
+    90,
+    68,
+    53,
+    59
+   ]
+  }
+ },
+ "cancellationReasons": {
+  "last": {
+   "seller_stock_unavailable": 6,
+   "late_dispatch": 12,
+   "customer_initiated": 14
+  },
+  "current": {
+   "seller_stock_unavailable": 21,
+   "late_dispatch": 11,
+   "customer_initiated": 6
+  }
+ },
+ "bridge": {
+  "grossOrders": {
+   "stockOutsNewlyOOS": 51,
+   "reducedPromotions": 35,
+   "organicRankLoss": 44,
+   "total": 130
+  },
+  "grossRupees": {
+   "stockOutsNewlyOOS": 23085,
+   "reducedPromotions": 18570,
+   "organicRankLoss": 23345,
+   "total": 65000
+  },
+  "netExtra": {
+   "cancellationIncreaseOrders": 6,
+   "rupeesApprox": 3000
+  },
+  "top4ShareOfStockOutLoss": 0.783,
+  "top4Rupees": 18078,
+  "notes": [
+   "gross lens explains the headline 65k sales drop",
+   "net lens adds extra cancelled orders (38 vs 32)",
+   "organicRankLoss is assumed to follow seller-performance penalties (stock-outs, cancellations, rating) - assumption A6"
+  ]
+ },
+ "skus": [
+  {
+   "sku": "KT-101",
+   "name": "Steel Pressure Cooker 5L",
+   "category": "Cookware",
+   "price": 636,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 18,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 4
+   },
+   "oosSinceDay": 8,
+   "lostRupees": 7632,
+   "lastRank": 2
+  },
+  {
+   "sku": "KT-102",
+   "name": "Steel Pressure Cooker 3L",
+   "category": "Cookware",
+   "price": 551,
+   "status": "in_stock",
+   "last": {
+    "orders": 22,
+    "cancelled": 3
+   },
+   "current": {
+    "orders": 17,
+    "cancelled": 1
+   },
+   "lostRupees": 2755,
+   "lastRank": 1
+  },
+  {
+   "sku": "KT-118",
+   "name": "Non-stick Tawa 28cm",
+   "category": "Cookware",
+   "price": 317,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 16,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 3
+   },
+   "oosSinceDay": 11,
+   "lostRupees": 3487,
+   "lastRank": 4
+  },
+  {
+   "sku": "KT-119",
+   "name": "Non-stick Kadhai 24cm",
+   "category": "Cookware",
+   "price": 359,
+   "status": "in_stock",
+   "last": {
+    "orders": 14,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 11,
+    "cancelled": 1
+   },
+   "lostRupees": 1077,
+   "lastRank": 6
+  },
+  {
+   "sku": "KT-124",
+   "name": "Induction Base Frying Pan",
+   "category": "Cookware",
+   "price": 332,
+   "status": "in_stock",
+   "last": {
+    "orders": 15,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 12,
+    "cancelled": 1
+   },
+   "lostRupees": 996,
+   "lastRank": 5
+  },
+  {
+   "sku": "KT-130",
+   "name": "Stainless Steel Tadka Pan",
+   "category": "Cookware",
+   "price": 163,
+   "status": "in_stock",
+   "last": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 2
+   },
+   "lostRupees": 326,
+   "lastRank": 33
+  },
+  {
+   "sku": "KT-133",
+   "name": "Cast Iron Dosa Tawa",
+   "category": "Cookware",
+   "price": 565,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 1695,
+   "lastRank": 27
+  },
+  {
+   "sku": "KT-140",
+   "name": "Idli Maker 4-Plate",
+   "category": "Cookware",
+   "price": 435,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 1
+   },
+   "lostRupees": 1305,
+   "lastRank": 28
+  },
+  {
+   "sku": "KT-142",
+   "name": "Milk Boiler 1.5L",
+   "category": "Cookware",
+   "price": 405,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 1,
+    "cancelled": 1
+   },
+   "oosSinceDay": 6,
+   "lostRupees": 810,
+   "lastRank": 46
+  },
+  {
+   "sku": "KT-150",
+   "name": "Copper Bottom Casserole Set",
+   "category": "Cookware",
+   "price": 1188,
+   "status": "in_stock",
+   "last": {
+    "orders": 9,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "lostRupees": 4752,
+   "lastRank": 17
+  },
+  {
+   "sku": "KT-155",
+   "name": "Steel Handi Set of 3",
+   "category": "Cookware",
+   "price": 727,
+   "status": "in_stock",
+   "last": {
+    "orders": 6,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "lostRupees": 727,
+   "lastRank": 34
+  },
+  {
+   "sku": "KT-160",
+   "name": "Non-stick Appam Pan",
+   "category": "Cookware",
+   "price": 265,
+   "status": "in_stock",
+   "last": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": -265,
+   "lastRank": 47
+  },
+  {
+   "sku": "ST-201",
+   "name": "Steel Lunch Box 3-Tier",
+   "category": "Kitchen Storage",
+   "price": 329,
+   "status": "in_stock",
+   "last": {
+    "orders": 17,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 14,
+    "cancelled": 2
+   },
+   "lostRupees": 987,
+   "lastRank": 3
+  },
+  {
+   "sku": "ST-204",
+   "name": "Airtight Container Set (6 pc)",
+   "category": "Kitchen Storage",
+   "price": 317,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 13,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 2
+   },
+   "oosSinceDay": 15,
+   "lostRupees": 3170,
+   "lastRank": 7
+  },
+  {
+   "sku": "ST-208",
+   "name": "Glass Jar Set (4 pc)",
+   "category": "Kitchen Storage",
+   "price": 486,
+   "status": "in_stock",
+   "last": {
+    "orders": 12,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 10,
+    "cancelled": 1
+   },
+   "lostRupees": 972,
+   "lastRank": 9
+  },
+  {
+   "sku": "ST-212",
+   "name": "Masala Box 7-Compartment",
+   "category": "Kitchen Storage",
+   "price": 229,
+   "status": "in_stock",
+   "last": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 1
+   },
+   "lostRupees": 229,
+   "lastRank": 38
+  },
+  {
+   "sku": "ST-215",
+   "name": "Plastic Container Set (12 pc)",
+   "category": "Kitchen Storage",
+   "price": 420,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 2,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "oosSinceDay": 9,
+   "lostRupees": 420,
+   "lastRank": 49
+  },
+  {
+   "sku": "ST-220",
+   "name": "Steel Water Bottle 1L",
+   "category": "Kitchen Storage",
+   "price": 237,
+   "status": "in_stock",
+   "last": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "lostRupees": 711,
+   "lastRank": 35
+  },
+  {
+   "sku": "ST-225",
+   "name": "Vacuum Insulated Flask 750ml",
+   "category": "Kitchen Storage",
+   "price": 512,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 1536,
+   "lastRank": 29
+  },
+  {
+   "sku": "ST-230",
+   "name": "Bread Box",
+   "category": "Kitchen Storage",
+   "price": 292,
+   "status": "in_stock",
+   "last": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 0,
+   "lastRank": 42
+  },
+  {
+   "sku": "ST-235",
+   "name": "Oil Dispenser 500ml",
+   "category": "Kitchen Storage",
+   "price": 354,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 2,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 1,
+    "cancelled": 1
+   },
+   "oosSinceDay": 12,
+   "lostRupees": 354,
+   "lastRank": 50
+  },
+  {
+   "sku": "ST-240",
+   "name": "Kitchen Rack 2-Tier",
+   "category": "Kitchen Storage",
+   "price": 715,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 7,
+    "cancelled": 1
+   },
+   "lostRupees": 0,
+   "lastRank": 30
+  },
+  {
+   "sku": "HM-310",
+   "name": "Microfiber Mop Set",
+   "category": "Cleaning",
+   "price": 421,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 11,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 2,
+    "cancelled": 1
+   },
+   "oosSinceDay": 19,
+   "lostRupees": 3789,
+   "lastRank": 10
+  },
+  {
+   "sku": "HM-312",
+   "name": "Spin Mop Bucket",
+   "category": "Cleaning",
+   "price": 1256,
+   "status": "in_stock",
+   "last": {
+    "orders": 12,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 9,
+    "cancelled": 1
+   },
+   "lostRupees": 3768,
+   "lastRank": 8
+  },
+  {
+   "sku": "HM-315",
+   "name": "Scrub Pad Pack of 12",
+   "category": "Cleaning",
+   "price": 97,
+   "status": "in_stock",
+   "last": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 0,
+   "lastRank": 41
+  },
+  {
+   "sku": "HM-318",
+   "name": "Floor Wiper",
+   "category": "Cleaning",
+   "price": 202,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 1
+   },
+   "lostRupees": 404,
+   "lastRank": 26
+  },
+  {
+   "sku": "HM-320",
+   "name": "Toilet Brush Holder",
+   "category": "Cleaning",
+   "price": 197,
+   "status": "in_stock",
+   "last": {
+    "orders": 8,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 1
+   },
+   "lostRupees": 788,
+   "lastRank": 22
+  },
+  {
+   "sku": "HM-322",
+   "name": "Microfiber Cloth Pack of 10",
+   "category": "Cleaning",
+   "price": 217,
+   "status": "in_stock",
+   "last": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 1
+   },
+   "lostRupees": 434,
+   "lastRank": 37
+  },
+  {
+   "sku": "HM-325",
+   "name": "Dustbin 10L Pedal",
+   "category": "Cleaning",
+   "price": 355,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 2,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "oosSinceDay": 13,
+   "lostRupees": 355,
+   "lastRank": 48
+  },
+  {
+   "sku": "HM-328",
+   "name": "Window Cleaner Squeegee",
+   "category": "Cleaning",
+   "price": 466,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSinceDay": 16,
+   "lostRupees": 466,
+   "lastRank": 55
+  },
+  {
+   "sku": "HM-330",
+   "name": "Broom Set",
+   "category": "Cleaning",
+   "price": 148,
+   "status": "in_stock",
+   "last": {
+    "orders": 9,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 1
+   },
+   "lostRupees": 444,
+   "lastRank": 16
+  },
+  {
+   "sku": "HM-335",
+   "name": "Sink Strainer Set",
+   "category": "Cleaning",
+   "price": 159,
+   "status": "out_of_stock_chronic",
+   "last": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSince": "before last month",
+   "note": "listing inactive/out of stock for 60+ days",
+   "lostRupees": 0,
+   "lastRank": 60
+  },
+  {
+   "sku": "DC-401",
+   "name": "LED String Lights 10m",
+   "category": "Home Decor",
+   "price": 247,
+   "status": "in_stock",
+   "last": {
+    "orders": 10,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 9,
+    "cancelled": 1
+   },
+   "lostRupees": 247,
+   "lastRank": 13
+  },
+  {
+   "sku": "DC-405",
+   "name": "Wall Clock Round 12in",
+   "category": "Home Decor",
+   "price": 392,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 1176,
+   "lastRank": 24
+  },
+  {
+   "sku": "DC-410",
+   "name": "Artificial Plant Set",
+   "category": "Home Decor",
+   "price": 831,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSinceDay": 17,
+   "lostRupees": 831,
+   "lastRank": 53
+  },
+  {
+   "sku": "DC-412",
+   "name": "Photo Frame Set of 5",
+   "category": "Home Decor",
+   "price": 558,
+   "status": "in_stock",
+   "last": {
+    "orders": 10,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 9,
+    "cancelled": 0
+   },
+   "lostRupees": 558,
+   "lastRank": 14
+  },
+  {
+   "sku": "DC-415",
+   "name": "Cushion Covers Pack of 5",
+   "category": "Home Decor",
+   "price": 297,
+   "status": "in_stock",
+   "last": {
+    "orders": 6,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 1
+   },
+   "lostRupees": 594,
+   "lastRank": 32
+  },
+  {
+   "sku": "DC-418",
+   "name": "Table Runner",
+   "category": "Home Decor",
+   "price": 201,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 3
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "lostRupees": 201,
+   "lastRank": 25
+  },
+  {
+   "sku": "DC-420",
+   "name": "Scented Candles Set",
+   "category": "Home Decor",
+   "price": 306,
+   "status": "in_stock",
+   "last": {
+    "orders": 9,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "lostRupees": 918,
+   "lastRank": 15
+  },
+  {
+   "sku": "DC-425",
+   "name": "Wall Shelf Floating",
+   "category": "Home Decor",
+   "price": 462,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "oosSinceDay": 20,
+   "lostRupees": 0,
+   "lastRank": 54
+  },
+  {
+   "sku": "DC-430",
+   "name": "Door Mat Anti-skid",
+   "category": "Home Decor",
+   "price": 165,
+   "status": "in_stock",
+   "last": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 2
+   },
+   "lostRupees": 0,
+   "lastRank": 40
+  },
+  {
+   "sku": "DC-435",
+   "name": "Flower Vase Ceramic",
+   "category": "Home Decor",
+   "price": 477,
+   "status": "out_of_stock_chronic",
+   "last": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSince": "before last month",
+   "note": "listing inactive/out of stock for 60+ days",
+   "lostRupees": 0,
+   "lastRank": 59
+  },
+  {
+   "sku": "BL-501",
+   "name": "Bath Towel Set of 2",
+   "category": "Bath & Laundry",
+   "price": 459,
+   "status": "in_stock",
+   "last": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 1
+   },
+   "lostRupees": 0,
+   "lastRank": 44
+  },
+  {
+   "sku": "BL-505",
+   "name": "Laundry Basket Foldable",
+   "category": "Bath & Laundry",
+   "price": 369,
+   "status": "in_stock",
+   "last": {
+    "orders": 10,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 7,
+    "cancelled": 0
+   },
+   "lostRupees": 1107,
+   "lastRank": 12
+  },
+  {
+   "sku": "BL-510",
+   "name": "Bathroom Shelf Organizer",
+   "category": "Bath & Laundry",
+   "price": 409,
+   "status": "in_stock",
+   "last": {
+    "orders": 8,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "lostRupees": 1227,
+   "lastRank": 20
+  },
+  {
+   "sku": "BL-515",
+   "name": "Shower Curtain",
+   "category": "Bath & Laundry",
+   "price": 261,
+   "status": "in_stock",
+   "last": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 1
+   },
+   "lostRupees": 0,
+   "lastRank": 31
+  },
+  {
+   "sku": "BL-520",
+   "name": "Clothes Drying Stand",
+   "category": "Bath & Laundry",
+   "price": 1266,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSinceDay": 22,
+   "lostRupees": 1266,
+   "lastRank": 52
+  },
+  {
+   "sku": "BL-525",
+   "name": "Soap Dispenser Set",
+   "category": "Bath & Laundry",
+   "price": 199,
+   "status": "in_stock",
+   "last": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "lostRupees": 0,
+   "lastRank": 45
+  },
+  {
+   "sku": "BL-530",
+   "name": "Hanger Pack of 24",
+   "category": "Bath & Laundry",
+   "price": 240,
+   "status": "in_stock",
+   "last": {
+    "orders": 8,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 6,
+    "cancelled": 0
+   },
+   "lostRupees": 480,
+   "lastRank": 21
+  },
+  {
+   "sku": "BL-535",
+   "name": "Bath Mat Microfiber",
+   "category": "Bath & Laundry",
+   "price": 351,
+   "status": "out_of_stock_chronic",
+   "last": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSince": "before last month",
+   "note": "listing inactive/out of stock for 60+ days",
+   "lostRupees": 0,
+   "lastRank": 58
+  },
+  {
+   "sku": "AP-601",
+   "name": "Electric Kettle 1.5L",
+   "category": "Small Appliances",
+   "price": 828,
+   "status": "in_stock",
+   "last": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "lostRupees": 828,
+   "lastRank": 36
+  },
+  {
+   "sku": "AP-605",
+   "name": "Sandwich Maker",
+   "category": "Small Appliances",
+   "price": 864,
+   "status": "in_stock",
+   "last": {
+    "orders": 10,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 8,
+    "cancelled": 0
+   },
+   "lostRupees": 1728,
+   "lastRank": 11
+  },
+  {
+   "sku": "AP-610",
+   "name": "Hand Blender 300W",
+   "category": "Small Appliances",
+   "price": 920,
+   "status": "in_stock",
+   "last": {
+    "orders": 8,
+    "cancelled": 2
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 0
+   },
+   "lostRupees": 2760,
+   "lastRank": 18
+  },
+  {
+   "sku": "AP-615",
+   "name": "Mixer Grinder 500W",
+   "category": "Small Appliances",
+   "price": 1300,
+   "status": "in_stock",
+   "last": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 3,
+    "cancelled": 0
+   },
+   "lostRupees": 0,
+   "lastRank": 43
+  },
+  {
+   "sku": "AP-620",
+   "name": "Induction Cooktop 1800W",
+   "category": "Small Appliances",
+   "price": 1173,
+   "status": "in_stock",
+   "last": {
+    "orders": 7,
+    "cancelled": 1
+   },
+   "current": {
+    "orders": 7,
+    "cancelled": 2
+   },
+   "lostRupees": 0,
+   "lastRank": 23
+  },
+  {
+   "sku": "AP-625",
+   "name": "Rice Cooker 1.8L",
+   "category": "Small Appliances",
+   "price": 1587,
+   "status": "in_stock",
+   "last": {
+    "orders": 4,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 2,
+    "cancelled": 1
+   },
+   "lostRupees": 3174,
+   "lastRank": 39
+  },
+  {
+   "sku": "AP-630",
+   "name": "Toaster 2-Slice",
+   "category": "Small Appliances",
+   "price": 1097,
+   "status": "out_of_stock_chronic",
+   "last": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSince": "before last month",
+   "note": "listing inactive/out of stock for 60+ days",
+   "lostRupees": 0,
+   "lastRank": 56
+  },
+  {
+   "sku": "AP-635",
+   "name": "Room Heater Mini",
+   "category": "Small Appliances",
+   "price": 1106,
+   "status": "out_of_stock_chronic",
+   "last": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSince": "before last month",
+   "note": "listing inactive/out of stock for 60+ days",
+   "lostRupees": 0,
+   "lastRank": 57
+  },
+  {
+   "sku": "AP-640",
+   "name": "Food Chopper Manual",
+   "category": "Small Appliances",
+   "price": 505,
+   "status": "out_of_stock_new",
+   "last": {
+    "orders": 1,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 0,
+    "cancelled": 0
+   },
+   "oosSinceDay": 24,
+   "lostRupees": 505,
+   "lastRank": 51
+  },
+  {
+   "sku": "AP-645",
+   "name": "Electric Lunch Box",
+   "category": "Small Appliances",
+   "price": 1092,
+   "status": "in_stock",
+   "last": {
+    "orders": 8,
+    "cancelled": 0
+   },
+   "current": {
+    "orders": 5,
+    "cancelled": 1
+   },
+   "lostRupees": 3276,
+   "lastRank": 19
+  }
+ ],
+ "cancellationRecords": {
+  "last": [
+   {
+    "orderId": "OCT-001",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 21
+   },
+   {
+    "orderId": "OCT-002",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 28
+   },
+   {
+    "orderId": "OCT-003",
+    "sku": "KT-118",
+    "reason": "seller_stock_unavailable",
+    "day": 12
+   },
+   {
+    "orderId": "OCT-004",
+    "sku": "KT-133",
+    "reason": "seller_stock_unavailable",
+    "day": 24
+   },
+   {
+    "orderId": "OCT-005",
+    "sku": "ST-201",
+    "reason": "seller_stock_unavailable",
+    "day": 7
+   },
+   {
+    "orderId": "OCT-006",
+    "sku": "KT-102",
+    "reason": "seller_stock_unavailable",
+    "day": 29
+   },
+   {
+    "orderId": "OCT-007",
+    "sku": "ST-225",
+    "reason": "late_dispatch",
+    "day": 8
+   },
+   {
+    "orderId": "OCT-008",
+    "sku": "ST-225",
+    "reason": "late_dispatch",
+    "day": 10
+   },
+   {
+    "orderId": "OCT-009",
+    "sku": "HM-312",
+    "reason": "late_dispatch",
+    "day": 25
+   },
+   {
+    "orderId": "OCT-010",
+    "sku": "AP-620",
+    "reason": "late_dispatch",
+    "day": 8
+   },
+   {
+    "orderId": "OCT-011",
+    "sku": "KT-150",
+    "reason": "late_dispatch",
+    "day": 19
+   },
+   {
+    "orderId": "OCT-012",
+    "sku": "DC-420",
+    "reason": "late_dispatch",
+    "day": 8
+   },
+   {
+    "orderId": "OCT-013",
+    "sku": "AP-610",
+    "reason": "late_dispatch",
+    "day": 27
+   },
+   {
+    "orderId": "OCT-014",
+    "sku": "AP-610",
+    "reason": "late_dispatch",
+    "day": 24
+   },
+   {
+    "orderId": "OCT-015",
+    "sku": "ST-240",
+    "reason": "late_dispatch",
+    "day": 3
+   },
+   {
+    "orderId": "OCT-016",
+    "sku": "KT-155",
+    "reason": "late_dispatch",
+    "day": 16
+   },
+   {
+    "orderId": "OCT-017",
+    "sku": "DC-418",
+    "reason": "late_dispatch",
+    "day": 20
+   },
+   {
+    "orderId": "OCT-018",
+    "sku": "KT-124",
+    "reason": "late_dispatch",
+    "day": 22
+   },
+   {
+    "orderId": "OCT-019",
+    "sku": "KT-150",
+    "reason": "customer_initiated",
+    "day": 7
+   },
+   {
+    "orderId": "OCT-020",
+    "sku": "DC-415",
+    "reason": "customer_initiated",
+    "day": 20
+   },
+   {
+    "orderId": "OCT-021",
+    "sku": "DC-415",
+    "reason": "customer_initiated",
+    "day": 2
+   },
+   {
+    "orderId": "OCT-022",
+    "sku": "KT-102",
+    "reason": "customer_initiated",
+    "day": 24
+   },
+   {
+    "orderId": "OCT-023",
+    "sku": "KT-102",
+    "reason": "customer_initiated",
+    "day": 10
+   },
+   {
+    "orderId": "OCT-024",
+    "sku": "HM-330",
+    "reason": "customer_initiated",
+    "day": 29
+   },
+   {
+    "orderId": "OCT-025",
+    "sku": "KT-119",
+    "reason": "customer_initiated",
+    "day": 8
+   },
+   {
+    "orderId": "OCT-026",
+    "sku": "DC-420",
+    "reason": "customer_initiated",
+    "day": 26
+   },
+   {
+    "orderId": "OCT-027",
+    "sku": "KT-133",
+    "reason": "customer_initiated",
+    "day": 4
+   },
+   {
+    "orderId": "OCT-028",
+    "sku": "HM-320",
+    "reason": "customer_initiated",
+    "day": 19
+   },
+   {
+    "orderId": "OCT-029",
+    "sku": "BL-530",
+    "reason": "customer_initiated",
+    "day": 10
+   },
+   {
+    "orderId": "OCT-030",
+    "sku": "ST-201",
+    "reason": "customer_initiated",
+    "day": 15
+   },
+   {
+    "orderId": "OCT-031",
+    "sku": "DC-418",
+    "reason": "customer_initiated",
+    "day": 18
+   },
+   {
+    "orderId": "OCT-032",
+    "sku": "DC-418",
+    "reason": "customer_initiated",
+    "day": 30
+   }
+  ],
+  "current": [
+   {
+    "orderId": "NOV-001",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 16
+   },
+   {
+    "orderId": "NOV-002",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 9
+   },
+   {
+    "orderId": "NOV-003",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 9
+   },
+   {
+    "orderId": "NOV-004",
+    "sku": "KT-101",
+    "reason": "seller_stock_unavailable",
+    "day": 14
+   },
+   {
+    "orderId": "NOV-005",
+    "sku": "KT-118",
+    "reason": "seller_stock_unavailable",
+    "day": 17
+   },
+   {
+    "orderId": "NOV-006",
+    "sku": "KT-118",
+    "reason": "seller_stock_unavailable",
+    "day": 10
+   },
+   {
+    "orderId": "NOV-007",
+    "sku": "KT-118",
+    "reason": "seller_stock_unavailable",
+    "day": 14
+   },
+   {
+    "orderId": "NOV-008",
+    "sku": "ST-204",
+    "reason": "seller_stock_unavailable",
+    "day": 22
+   },
+   {
+    "orderId": "NOV-009",
+    "sku": "ST-204",
+    "reason": "seller_stock_unavailable",
+    "day": 18
+   },
+   {
+    "orderId": "NOV-010",
+    "sku": "HM-310",
+    "reason": "seller_stock_unavailable",
+    "day": 24
+   },
+   {
+    "orderId": "NOV-011",
+    "sku": "KT-142",
+    "reason": "seller_stock_unavailable",
+    "day": 6
+   },
+   {
+    "orderId": "NOV-012",
+    "sku": "ST-235",
+    "reason": "seller_stock_unavailable",
+    "day": 20
+   },
+   {
+    "orderId": "NOV-013",
+    "sku": "KT-130",
+    "reason": "seller_stock_unavailable",
+    "day": 28
+   },
+   {
+    "orderId": "NOV-014",
+    "sku": "KT-130",
+    "reason": "seller_stock_unavailable",
+    "day": 24
+   },
+   {
+    "orderId": "NOV-015",
+    "sku": "ST-201",
+    "reason": "seller_stock_unavailable",
+    "day": 17
+   },
+   {
+    "orderId": "NOV-016",
+    "sku": "KT-119",
+    "reason": "seller_stock_unavailable",
+    "day": 15
+   },
+   {
+    "orderId": "NOV-017",
+    "sku": "HM-330",
+    "reason": "seller_stock_unavailable",
+    "day": 24
+   },
+   {
+    "orderId": "NOV-018",
+    "sku": "AP-645",
+    "reason": "seller_stock_unavailable",
+    "day": 26
+   },
+   {
+    "orderId": "NOV-019",
+    "sku": "KT-124",
+    "reason": "seller_stock_unavailable",
+    "day": 24
+   },
+   {
+    "orderId": "NOV-020",
+    "sku": "ST-208",
+    "reason": "seller_stock_unavailable",
+    "day": 12
+   },
+   {
+    "orderId": "NOV-021",
+    "sku": "DC-430",
+    "reason": "seller_stock_unavailable",
+    "day": 29
+   },
+   {
+    "orderId": "NOV-022",
+    "sku": "DC-430",
+    "reason": "late_dispatch",
+    "day": 14
+   },
+   {
+    "orderId": "NOV-023",
+    "sku": "HM-322",
+    "reason": "late_dispatch",
+    "day": 25
+   },
+   {
+    "orderId": "NOV-024",
+    "sku": "DC-415",
+    "reason": "late_dispatch",
+    "day": 17
+   },
+   {
+    "orderId": "NOV-025",
+    "sku": "AP-625",
+    "reason": "late_dispatch",
+    "day": 30
+   },
+   {
+    "orderId": "NOV-026",
+    "sku": "AP-620",
+    "reason": "late_dispatch",
+    "day": 14
+   },
+   {
+    "orderId": "NOV-027",
+    "sku": "AP-620",
+    "reason": "late_dispatch",
+    "day": 21
+   },
+   {
+    "orderId": "NOV-028",
+    "sku": "ST-201",
+    "reason": "late_dispatch",
+    "day": 11
+   },
+   {
+    "orderId": "NOV-029",
+    "sku": "ST-212",
+    "reason": "late_dispatch",
+    "day": 15
+   },
+   {
+    "orderId": "NOV-030",
+    "sku": "KT-140",
+    "reason": "late_dispatch",
+    "day": 28
+   },
+   {
+    "orderId": "NOV-031",
+    "sku": "BL-501",
+    "reason": "late_dispatch",
+    "day": 25
+   },
+   {
+    "orderId": "NOV-032",
+    "sku": "KT-102",
+    "reason": "late_dispatch",
+    "day": 19
+   },
+   {
+    "orderId": "NOV-033",
+    "sku": "HM-312",
+    "reason": "customer_initiated",
+    "day": 21
+   },
+   {
+    "orderId": "NOV-034",
+    "sku": "HM-320",
+    "reason": "customer_initiated",
+    "day": 12
+   },
+   {
+    "orderId": "NOV-035",
+    "sku": "HM-318",
+    "reason": "customer_initiated",
+    "day": 23
+   },
+   {
+    "orderId": "NOV-036",
+    "sku": "ST-240",
+    "reason": "customer_initiated",
+    "day": 13
+   },
+   {
+    "orderId": "NOV-037",
+    "sku": "BL-515",
+    "reason": "customer_initiated",
+    "day": 25
+   },
+   {
+    "orderId": "NOV-038",
+    "sku": "DC-401",
+    "reason": "customer_initiated",
+    "day": 13
+   }
+  ]
+ },
+ "supplierRestock": {
+  "KT-101": {
+   "supplier": "Bharat Steelware (Meerut)",
+   "unitCost": 420,
+   "suggestedQty": 30,
+   "cost": 12600
+  },
+  "KT-118": {
+   "supplier": "Prime Cookware (Delhi)",
+   "unitCost": 209,
+   "suggestedQty": 25,
+   "cost": 5225
+  },
+  "ST-204": {
+   "supplier": "Everfresh Plastics (Noida)",
+   "unitCost": 209,
+   "suggestedQty": 20,
+   "cost": 4180
+  },
+  "HM-310": {
+   "supplier": "CleanPro Traders (Kanpur)",
+   "unitCost": 278,
+   "suggestedQty": 20,
+   "cost": 5560
+  }
+ },
+ "reviews": {
+  "rating": {
+   "last": 4.2,
+   "current": 4.0
+  },
+  "recent": [
+   {
+    "day": 9,
+    "stars": 2,
+    "sku": "KT-101",
+    "text": "Order cancelled after 3 days, told stock unavailable."
+   },
+   {
+    "day": 12,
+    "stars": 1,
+    "sku": "KT-118",
+    "text": "Cancelled twice. Seller says out of stock but listing still shows available."
+   },
+   {
+    "day": 14,
+    "stars": 4,
+    "sku": "KT-102",
+    "text": "Good quality cooker, delivery a bit late."
+   },
+   {
+    "day": 16,
+    "stars": 3,
+    "sku": "ST-201",
+    "text": "Product fine, packaging poor, took 7 days to ship."
+   },
+   {
+    "day": 18,
+    "stars": 2,
+    "sku": "ST-204",
+    "text": "Wanted this set, got cancellation message."
+   },
+   {
+    "day": 19,
+    "stars": 5,
+    "sku": "KT-124",
+    "text": "Very good pan, value for money."
+   },
+   {
+    "day": 21,
+    "stars": 2,
+    "sku": "HM-312",
+    "text": "Dispatch delayed, got it after promised date."
+   },
+   {
+    "day": 23,
+    "stars": 3,
+    "sku": "ST-208",
+    "text": "Okay product, late delivery."
+   },
+   {
+    "day": 25,
+    "stars": 1,
+    "sku": "HM-310",
+    "text": "Order cancelled by seller, wasted a week."
+   },
+   {
+    "day": 27,
+    "stars": 4,
+    "sku": "KT-119",
+    "text": "Nice kadhai."
+   }
+  ]
+ },
+ "portfolio": [
+  {
+   "sellerId": "SD-48213",
+   "business": "Sharma Home Essentials",
+   "salesDeltaPct": -32.5,
+   "ordersDeltaPct": -32.5,
+   "cancelNow": 0.14,
+   "oosNow": 18,
+   "anomalyScore": 0.91
+  },
+  {
+   "sellerId": "SD-30871",
+   "business": "Gupta Fashion Hub",
+   "salesDeltaPct": 4.2,
+   "ordersDeltaPct": 3.8,
+   "cancelNow": 0.06,
+   "oosNow": 3,
+   "anomalyScore": 0.08
+  },
+  {
+   "sellerId": "SD-22190",
+   "business": "Verma Electronics",
+   "salesDeltaPct": -6.0,
+   "ordersDeltaPct": -5.1,
+   "cancelNow": 0.09,
+   "oosNow": 6,
+   "anomalyScore": 0.27
+  },
+  {
+   "sellerId": "SD-55012",
+   "business": "Khan Beauty Store",
+   "salesDeltaPct": 12.5,
+   "ordersDeltaPct": 10.1,
+   "cancelNow": 0.05,
+   "oosNow": 2,
+   "anomalyScore": 0.04
+  },
+  {
+   "sellerId": "SD-41677",
+   "business": "Singh Toys & Games",
+   "salesDeltaPct": -14.0,
+   "ordersDeltaPct": -12.2,
+   "cancelNow": 0.11,
+   "oosNow": 9,
+   "anomalyScore": 0.52
+  },
+  {
+   "sellerId": "SD-19340",
+   "business": "Mishra Books Depot",
+   "salesDeltaPct": 0.8,
+   "ordersDeltaPct": 1.1,
+   "cancelNow": 0.04,
+   "oosNow": 1,
+   "anomalyScore": 0.03
+  }
+ ],
+ "assumptionsList": [
+  "A1 Catalogue = 60 active SKUs; 5 chronic OOS (dead listings), 13 newly OOS this month, 42 in stock.",
+  "A2 The 13 newly OOS SKUs sold 72 orders last month (4 of them in top-10: KT-101, KT-118, ST-204, HM-310).",
+  "A3 Impressions 120000 -> 84000 (-30%); conversion about flat (0.33% -> 0.32%).",
+  "A4 Cancellations this month: 38 (21 stock, 11 late dispatch, 6 customer). Last month: 32 (6 stock, 12 late, 14 customer).",
+  "A5 Dispatch SLA breach 6% -> 15%.",
+  "A6 Rating 4.2 -> 4.0; marketplaces typically penalise stock-outs/cancellations in ranking; organic rank loss is assumed to follow that.",
+  "A7 Ad spend 8000 -> 2500 (cash-flow squeeze); ad-attributed orders 52 -> 17.",
+  "A8 Competitor price index about flat; restock lead time 5-7 days; supplier payment pending (cash-flow).",
+  "A9 All SKU prices fixed across both months so ASP is exactly 500 in both."
+ ]
+}
