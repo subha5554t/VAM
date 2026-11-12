@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply m-0 font-sans text-ink;
+    background-color: #f6f3ee;
+    background-image: radial-gradient(circle at 12% -8%, rgba(228, 0, 70, 0.055), transparent 42%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(228, 0, 70, 0.18);
+    color: #16181d;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-line bg-panel shadow-panel;
+  }
+
+  .panel-dark {
+    @apply rounded-2xl border border-stage-line bg-stage-panel shadow-lift;
+  }
+
+  .label {
+    @apply text-[10px] font-semibold uppercase tracking-[0.14em] text-muted;
+  }
+
+  .label-dark {
+    @apply text-[10px] font-semibold uppercase tracking-[0.14em] text-stage-muted;
+  }
+
+  .metric {
+    @apply text-[27px] font-semibold leading-none tracking-tight text-ink;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #d5cdc2 transparent;
+  }
+  .scroll-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-thin::-webkit-scrollbar-thumb {
+    background: #d5cdc2;
+    border-radius: 999px;
+  }
+  .scroll-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scroll-thin-dark {
+    scrollbar-width: thin;
+    scrollbar-color: #2b3a52 transparent;
+  }
+  .scroll-thin-dark::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-thin-dark::-webkit-scrollbar-thumb {
+    background: #2b3a52;
+    border-radius: 999px;
+  }
+  .scroll-thin-dark::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Streaming transcript caret. Pseudo content is invisible to textContent,
+     so the E2E transcript extractor stays clean. */
+  .caret::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    vertical-align: -0.15em;
+    background: currentColor;
+    animation: caretBlink 1.1s steps(1) infinite;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Voice core                                                          */
+/* ------------------------------------------------------------------ */
+
+.voice-bars {
+  transform: scale(calc(0.82 + var(--level, 0) * 0.32));
+  transition: transform 120ms ease-out;
+  will-change: transform;
+}
+
+.voice-bar-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+}
+
+.voice-bar-slot i {
+  position: absolute;
+  left: 0;
+  bottom: 84px;
+  width: 2px;
+  height: 10px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.45;
+  transform-origin: bottom center;
+  animation: barPulse 1.4s ease-in-out infinite;
+}
+
+.voice-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  opacity: 0;
+  animation: ringOut 2.6s ease-out infinite;
+}
+
+.voice-sphere {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.08) 36%, transparent 62%),
+    linear-gradient(145deg, var(--from), var(--to));
+  box-shadow:
+    0 24px 60px -20px var(--glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 120ms ease-out;
+}
+
+@keyframes barPulse {
+  0%,
+  100% {
+    height: 8px;
+    opacity: 0.22;
+  }
+  50% {
+    height: 24px;
+    opacity: 0.85;
+  }
+}
+
+@keyframes ringOut {
+  0% {
+    transform: scale(0.62);
+    opacity: 0.45;
+  }
+  70% {
+    opacity: 0.08;
+  }
+  100% {
+    transform: scale(1.02);
+    opacity: 0;
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-ring {
+    display: none;
+  }
+  .voice-bar-slot i,
+  .caret::after {
+    animation: none !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
