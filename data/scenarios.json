@@ -13,7 +13,7 @@
     "Yes, please set the plan and follow up in three days."
    ],
    "expect": [
-    "greets and asks how it can help",
+    "greets by name as Asha and opens with a grounded fact, then asks one focused question",
     "calls get_seller_snapshot and analyze_sales_decline before stating any numbers",
     "mentions orders fell about a third, stock-outs 5 to 18, cancellations 8% to 14%",
     "asks at most 3 questions",
