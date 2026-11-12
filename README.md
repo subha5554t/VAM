@@ -137,8 +137,5 @@ snapdeal-voice-kam/
 
 ---
 
-## 📜 Assignment Documentation Links
-- **[One-Page Technical Note](file:///c:/Users/VICTUS/Downloads/VAM/docs/NOTE_1PAGE.md)** — Models, voice technologies, and production roadmap.
-- **[Demo Recording Script](file:///c:/Users/VICTUS/Downloads/VAM/docs/DEMO_SCRIPT.md)** — Step-by-step timed demo walk-through.
-- **[Master Plan v2](file:///c:/Users/VICTUS/Downloads/VAM/docs/MASTER_PLAN.md)** — Complete architectural specification.
+
 
