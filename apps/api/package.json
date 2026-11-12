@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "test": "vitest run"
+    "test": "vitest run",
+    "evals": "tsx src/evals.ts"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
