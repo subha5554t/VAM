@@ -1,28 +1,32 @@
-# TASKS (status: todo | doing | done | blocked) — full specs in MASTER_PLAN §25
+# TASKS (status: todo | doing | done | blocked) — full specs in docs/MASTER_PLAN.md §25
 | ID | Task | Status | Evidence |
 |---|---|---|---|
-| T00 | Scaffold monorepo + guard files | done | pnpm workspaces (@kam/core, api, web), vitest tests pass across all packages, .env gitignored |
-| T01 | Verify Live API with official example (model, voice, tools, transcripts) | todo | |
-| T02 | Core types + data loader (Zod) | todo | |
-| T03 | Analytics engine + bridge + tests | todo | |
-| T04 | Recommendation engine (3 actions, ROI, cash-flow aware) + tests | todo | |
-| T05 | Tool declarations + handlers + schemas | todo | |
-| T06 | API server (health, tools, rate limit, logging) | todo | |
-| T07 | Ephemeral token endpoint (locked config) | todo | |
-| T08 | Prompt builder + prompt snapshot tests | todo | |
-| T09 | Audio capture (AudioWorklet, 16 kHz PCM) | todo | |
-| T10 | Audio player (24 kHz, gapless, flush on interrupt) | todo | |
-| T11 | LiveSession (connect, resume, goAway, tool bridge, transcripts) | todo | |
-| T12 | UI shell + orb + state machine | todo | |
-| T13 | Cockpit + activity feed + stage tracker | todo | |
-| T14 | Action plan + summary + download | todo | |
-| T15 | Language toggle + Hinglish/Hindi | todo | |
-| T16 | Compatibility (fallback) mode | todo | |
-| T17 | Proactive mode (portfolio anomaly) | todo | |
-| T18 | Escalation flow | todo | |
-| T19 | Eval harness + LLM judge | todo | |
-| T20 | Playwright E2E with fake mic | todo | |
-| T21 | Hardening: security, observability, errors | todo | |
-| T22 | Deploy (web + api) + phone test | todo | |
-| T23 | Rehearse + record | todo | |
-| T24 | README + one-page note + submission email | todo | |
+| T00 | Scaffold monorepo + guard files | done | pnpm workspaces (`@kam/core`, `api`, `web`), `.gitignore` excludes `.env`, root + `docs/` guard files |
+| T01 | Verify Live API with official example (model, voice, tools, transcripts) | done | `gemini-3.8-live` on `v1beta` verified via `scripts/debug-live.mjs`: `setupComplete`, `outputTranscription`, 24kHz PCM audio, `toolCall` |
+| T02 | Core types + data loader (Zod) | done | `types.ts` Zod schemas, `MockSellerProvider` (src/dist/root candidate resolution), `packages/core/package.json` `exports` → `dist/` |
+| T03 | Analytics engine + bridge + tests | done | `analytics.ts`: Σ400/270 orders, Σ200k/135k sales, bridge 23085+18570+23345=65000, price ruled out data-driven (6 tests pass) |
+| T04 | Recommendation engine (3 actions, ROI, cash-flow aware) + tests | done | `recommend.ts`: exactly 3 actions, top-4 SKUs, ₹27,565 restock cost, realistic ₹39k–48k, ROI cash-flow advice (4 tests pass) |
+| T05 | Tool declarations + handlers + schemas | done | `tools.ts`: all 8 tools with JSON Schema, Zod validation, 2s timeout, `{ok,data,error}` return (11 tests pass) |
+| T06 | API server (health, tools, rate limit, logging) | done | `apps/api/src/server.ts`: Fastify, CORS, rate-limit, `/healthz`, `POST /api/tools/:name`, compiles & tests pass |
+| T07 | Ephemeral token endpoint (locked config) | done | `POST /api/session` mints `uses:1` ephemeral token locked to `gemini-3.8-live` + systemInstruction + 8 tools (tested live) |
+| T08 | Prompt builder + prompt snapshot tests | done | `packages/core/src/prompt.ts`: ≤25 words, filler before tools, 7 stages, en/hi/hinglish, reactive/proactive (5 tests pass) |
+| T09 | Audio capture (16 kHz PCM + barge-in volume) | done | `capture.ts`: `ScriptProcessorNode(2048)` + box-filter decimation to 16 kHz + `muteGain(0)` loop + `CaptureDiagnostics`; real 16 kHz speech transcribed by Gemini (`live-e2e.mjs`) and 5 unit tests pass |
+| T10 | Audio player (24 kHz, gapless, flush on interrupt) | done | `apps/web/src/audio/player.ts`: 24kHz `AudioBufferSourceNode` scheduler + instant `flush()`, 3 unit tests pass, played greeting in Chrome |
+| T11 | LiveSession (connect, resume, goAway, tool bridge, transcripts) | done | `realtimeInput.audio` (not `mediaChunks`), parallel mic start, real `setMuted()`, sustained barge-in, resumption-aware reconnect, tool relay; 9 wire-protocol unit tests + `live-e2e.mjs` 7/7 |
+| T12 | UI shell + orb + state machine | done | `App.tsx`, `Header.tsx`, `Orb.tsx`, `useCallStore.ts`; mute now calls `liveSession.setMuted()` (mic + player), mic-health bar shows device/RMS/track state |
+| T13 | Cockpit + activity feed + stage tracker | done | `Cockpit.tsx`, `ActivityFeed.tsx`, `StageTracker.tsx`, `Transcript.tsx` (with debug text input bar) compile & render cleanly |
+| T14 | Action plan + summary + download | done | `ActionPlanCard.tsx` (3 cards, escalation & followup banners, Download `.md`) + `AssumptionsDrawer.tsx` (A1–A9) |
+| T15 | Language toggle + Hinglish/Hindi | done | `Header.tsx` toggle (`hinglish` / `en` / `hi`) passed into `POST /api/session` and `/api/chat` prompt builder |
+| T16 | Compatibility (fallback) mode | done | `/api/chat` runs a real tool loop (tools + `toolEvents`, `thoughtSignature` preserved); `handleStartFallback` keeps multi-turn history; verified: tools called and reply quoted tool numbers. Known: ~12 s per LLM hop |
+| T17 | Proactive mode (portfolio anomaly) | done | `Header.tsx` "Simulate Proactive Call" passes `mode: 'proactive'` to `/api/session` & triggers proactive greeting |
+| T18 | Escalation flow | done | `escalate_to_human_kam` handler + `ActionPlanCard.tsx` escalation ticket banner tested |
+| T19 | Eval harness + LLM judge | doing | `apps/api/src/evals.ts` tested 5/5 scenarios earlier; full 24 scenarios, tool-call pass-through & LLM judge scoring still needed |
+| T20 | Browser E2E with fake mic | done | Not Playwright: `scripts/browser-e2e.mjs` drives headless Chrome over CDP with an injected `AudioBufferSource` mic. 6/6: complete greeting, gate released after playback drains (`player-drained`), VAD badge, seller transcript, reply |
+| T21 | Hardening: security, observability, errors | done | Ephemeral tokens, rate limits, Zod validation, timeouts; verify CORS strictness before prod deploy (`server.ts:32` allows all in dev) |
+| T22 | Deploy (web + api) + phone test | todo | `pnpm -r build` produces clean `apps/web/dist` and `apps/api/dist`, not deployed yet |
+| T23 | Rehearse + record | doing | `docs/DEMO_SCRIPT.md` ready; voice loop + action plan now proven headlessly (`e2e:browser` 6/6, `e2e:plan` 7/7); still needs one real-mic headed pass |
+| T26 | Reliable listening + grounded plan | done | Proxy `127.0.0.1` + dual-stack API, greeting gate, `turnCoverage` fix, `prefixPaddingMs:100`, VAD badge, `onDrain`; prompt no longer contains rupee figures and calls `create_action_plan` at RECOMMEND. 71/71 tests; `e2e:browser` 6/6; `e2e:plan` 7/7 |
+| T27 | Real-mic capture reliability + ivory/ink UI refresh | done (code) · human retry pending | Removed forced 16 kHz `AudioContext` (native rate + JS resample), added device picker/exact `deviceId` with fallback, relaxed `Reconnect mic`, mic-health banner, 30 s gate hard timeout; new Header/CallStage/VoiceCore/Transcript/BusinessVitals/LossBridge/AgentTrace. 77/77 tests; build green; `e2e:browser` 6/6 (log: `started at 48000Hz`); `e2e:plan` 7/7. **Real hardware not verified here.** |
+| T28 | Turn-taking: wait for the seller, listen fully, then answer | done (code) · human feel-check pending | VAD silence window 500→1000 ms (`LIVE_VAD_CONFIG` in `apps/api/src/server.ts`), TURN-TAKING block in `packages/core/src/prompt.ts` (wait through pauses, connectivity checks are not answers, no tool call before a real business cause, one filler then both diagnostic tools with no speech between), greeting gate now waits for `player.onDrain` (`greetingTurnCompleted` + `player-drained`) instead of releasing on `turnComplete`. 84/84 tests; build exit 0; `e2e:browser` 6/6 (reply to "can you hear me?" calls no tool and repeats the question); `e2e:plan` 7/7; `evals` 5/5. Tune `silenceDurationMs` 900–1200 ms if a real pause is still cut. |
+| T24 | README + one-page note + submission email | doing | `README.md` & `docs/NOTE_1PAGE.md` `AudioWorklet` wording corrected to `ScriptProcessorNode` + native-rate resampling; remaining: recording URL + deployed live URL |
+| T25 | Live-path reliability: rate limit, honest errors, no dead air | done | `/api/session` 15/min → 60/min with `RATE_LIMITED` body (`x-ratelimit-limit: 60`); client retries the mint 4× and surfaces the real reason; warm `GoogleGenAI` per apiVersion (mint 4.9 s → 1.3 s); one warm token (3 s min gap); readiness chip + "Securing voice channel…"; `pnpm e2e:live:fast` 4/4, `pnpm e2e:live` 7/7, 68/68 tests, browser (CDP) verified incl. a forced 429 |
